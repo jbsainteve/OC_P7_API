@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prédiction des scores clients</title>
+</head>
+<body>
+    <h1>Entrer le numéro du client (0 à 48744)</h1>
+    <form action="/" method="POST"> 
+        <input type="number" name="Client" placeholder="Num du client">
+        <input type="submit">
+    </form>
+    {% if cli %}
+        <h4>Client : {{cli}}</h4>
+    {% endif %}
+    {% if predict %}
+        {% for x in predict %}
+            <p>Prediction : {{x}}</p>
+        {% endfor%}
+    {% endif %}
+     
+</body>
+</html>
